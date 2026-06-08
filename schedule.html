@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christ University Events - Schedule</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Christ University Events &amp; Festivals</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="schedule.html" class="active">Schedule</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+          <li><a href="faq-venue.html">FAQ & Venue</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="schedule-intro">
+        <h2>GATEWAYS 2026 Event Schedule</h2>
+        <p>
+          Department of Computer Science, Christ (Deemed to be University),
+          Bangalore
+        </p>
+        <p>Plan your fest experience with our detailed event schedule</p>
+        <div class="countdown-container">
+          <p>
+            Main Event starts in:
+            <time id="schedule-countdown" datetime="2026-04-15T09:00:00"
+              ><span class="days">0</span>d <span class="hours">0</span>h
+              <span class="minutes">0</span>m
+              <span class="seconds">0</span>s</time
+            >
+          </p>
+        </div>
+      </section>
+
+      <section class="track">
+        <h2>Technical Track</h2>
+        <article>
+          <h3>Programming Contest</h3>
+          <p>
+            Test your coding skills in this competitive programming challenge.
+            Organized by Department of Computer Science.
+          </p>
+          <time datetime="2026-04-15T10:00"
+            >April 15, 2026 - 10:00 AM to 4:00 PM</time
+          >
+          <div class="countdown-inline">
+            <time datetime="2026-04-15T10:00"
+              >Time until event:
+              <time id="countdown-tech" datetime="2026-04-15T10:00"
+                >Loading...</time
+              ></time
+            >
+          </div>
+          <div class="progress-container">
+            <label>Seats Remaining:</label>
+            <progress value="25" max="50">50%</progress>
+            <data value="25">25/50 seats available</data>
+          </div>
+        </article>
+        <article>
+          <h3>Hackathon 2026</h3>
+          <p>
+            24-hour overnight coding marathon with industry mentors. Participate
+            and innovate!
+          </p>
+          <time datetime="2026-04-15T14:00"
+            >April 15, 2026 - 2:00 PM to April 16, 2026 - 2:00 PM</time
+          >
+          <div class="progress-container">
+            <label>Registration Progress:</label>
+            <meter value="75" max="100" min="0" optimum="100">75%</meter>
+          </div>
+        </article>
+        <article>
+          <h3>Project Expo</h3>
+          <p>
+            Showcase your innovative projects to industry experts from CISCO,
+            REDHAT, and ORACLE Academy.
+          </p>
+          <time datetime="2026-04-16T11:00"
+            >April 16, 2026 - 11:00 AM to 3:00 PM</time
+          >
+        </article>
+      </section>
+
+      <section class="track">
+        <h2>Gaming Track</h2>
+        <article>
+          <h3>PUBG Championship</h3>
+          <p>
+            Team battle royale competition with exciting prizes. Open to all
+            departments.
+          </p>
+          <time datetime="2026-04-15T15:00"
+            >April 15, 2026 - 3:00 PM onwards</time
+          >
+        </article>
+        <article>
+          <h3>FIFA Tournament</h3>
+          <p>Single elimination football gaming championship.</p>
+          <time datetime="2026-04-16T10:00"
+            >April 16, 2026 - 10:00 AM to 12:00 PM</time
+          >
+        </article>
+        <article>
+          <h3>Valorant Cup</h3>
+          <p>5v5 tactical shooter competition.</p>
+          <time datetime="2026-04-17T09:00"
+            >April 17, 2026 - 9:00 AM to 1:00 PM</time
+          >
+        </article>
+      </section>
+
+      <section class="track">
+        <h2>Cultural Track</h2>
+        <article>
+          <h3>Dance Competition</h3>
+          <p>
+            Solo and group dance performances showcasing talent from Computer
+            Science students.
+          </p>
+          <time datetime="2026-04-15T17:00"
+            >April 15, 2026 - 5:00 PM to 7:00 PM</time
+          >
+        </article>
+        <article>
+          <h3>Music Night</h3>
+          <p>
+            Live band performances and solo singing contests. Experience the
+            musical side of Christites.
+          </p>
+          <time datetime="2026-04-16T18:00"
+            >April 16, 2026 - 6:00 PM onwards</time
+          >
+        </article>
+        <article>
+          <h3>Drama Performance</h3>
+          <p>
+            Street plays and theatrical performances by various teams from all
+            departments.
+          </p>
+          <time datetime="2026-04-17T17:00"
+            >April 17, 2026 - 5:00 PM to 7:00 PM</time
+          >
+        </article>
+      </section>
+
+      <dialog id="info-dialog">
+        <h3>Important Note</h3>
+        <p>
+          All events are mandatory to register in advance. On-spot registrations
+          will be subject to availability.
+        </p>
+        <p>For queries, contact: 080-40129100 | cs.fest@christuniversity.in</p>
+        <button id="close-dialog">Close</button>
+      </dialog>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Department of Computer Science, Christ (Deemed to be
+        University). All rights reserved.
+      </p>
+      <p>Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+    </footer>
+
+    <script>
+      function startCountdown(elementId, targetDate) {
+        const element = document.querySelector(elementId);
+        const countdownDate = new Date(targetDate).getTime();
+
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = countdownDate - now;
+
+          if (distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor(
+              (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+            );
+            const minutes = Math.floor(
+              (distance % (1000 * 60 * 60)) / (1000 * 60),
+            );
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (element.querySelector(".days")) {
+              element.querySelector(".days").textContent = days;
+              element.querySelector(".hours").textContent = hours;
+              element.querySelector(".minutes").textContent = minutes;
+              element.querySelector(".seconds").textContent = seconds;
+            }
+          } else {
+            element.innerHTML = "Event started!";
+          }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      }
+
+      startCountdown("#schedule-countdown", "2026-04-15T09:00:00");
+      startCountdown("#countdown-tech", "2026-04-15T10:00:00");
+    </script>
+  </body>
+</html>
