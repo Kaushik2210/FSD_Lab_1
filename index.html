@@ -1,115 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christ University Events - Home</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christ University Events - Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Christ University Events &amp; Festivals</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="faq-venue.html">FAQ & Venue</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="wrap top">
+      <div>
+        <p class="eyebrow">Christ (Deemed to be University)</p>
+        <h1>GATEWAYS 2026</h1>
+        <p class="sub">Department of Computer Science fest</p>
+      </div>
+      <nav class="nav">
+        <a class="active" href="index.html">Home</a><a href="schedule.html">Schedule</a><a href="register.html">Register</a><a href="leaderboard.html">Leaderboard</a><a href="faq-venue.html">FAQ &amp; Venue</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="hero">
-            <h2>GATEWAYS 2026 - Annual Computer Science Fest</h2>
-            <p class="event-date">
-                <time datetime="2026-04-15">April 15-17, 2026</time>
-                | Department of Computer Science, Christ (Deemed to be University), Bangalore
-            </p>
-            <figure>
-                <img src="placeholder-hero.jpg" alt="GATEWAYS Fest Celebration">
-                <figcaption>Join us for three days of technical excellence and creativity!</figcaption>
-            </figure>
-            <div class="countdown-container">
-                <p>Event Countdown:</p>
-                <time id="event-countdown" datetime="2026-04-15T09:00:00">
-                    <span class="days-display">0</span> days
-                    <span class="hours-display">0</span> hours
-                    <span class="minutes-display">0</span> minutes
-                    <span class="seconds-display">0</span> seconds
-                </time>
-            </div>
-            <a href="register.html" class="cta-button">Register Now</a>
-        </section>
+  <main class="wrap">
+    <section class="hero section">
+      <span class="tag">April 15 to 17, 2026</span>
+      <h2>A simple, warm, and professional event site</h2>
+      <p>Three days of technical, gaming, and cultural activities at Christ University, Bengaluru.</p>
+      <p class="actions"><a class="btn primary" href="register.html">Register now</a><a class="btn" href="schedule.html">View schedule</a></p>
+    </section>
 
-        <section class="highlights">
-            <h2>Event Highlights</h2>
-            <article>
-                <h3>Technical Innovation Challenge</h3>
-                <p>Showcase your coding and hardware skills in our premier technical competition. Test your strengths and improve on weaknesses through various technical events.</p>
-                <time datetime="2026-04-15T10:00">April 15, 2026 | 10:00 AM</time>
-                <div class="countdown-inline">
-                    <time datetime="2026-04-15T10:00">Registration closes: <time datetime="2026-04-10">April 10, 2026</time></time>
-                </div>
-            </article>
-            <article>
-                <h3>Gaming Tournament</h3>
-                <p>Compete in PUBG, Valorant, and FIFA tournaments with exciting prizes. Open to all departments.</p>
-                <time datetime="2026-06-16T10:00">June 16, 2026 | 10:00 AM</time>
-            </article>
-            <article>
-                <h3>Cultural Night</h3>
-                <p>Experience music, dance, and drama performances by talented Christ University students.</p>
-                <time datetime="2026-06-17T18:00">June 17, 2026 | 6:00 PM onwards</time>
-            </article>
-        </section>
+    <section class="section">
+      <h2>At a glance</h2>
+      <div class="grid">
+        <article class="card"><h3>Technical</h3><p>Coding, hackathons, and project showcases.</p></article>
+        <article class="card"><h3>Gaming</h3><p>Focused tournaments with clear rounds and fair play.</p></article>
+        <article class="card"><h3>Cultural</h3><p>Music, dance, and stage performances.</p></article>
+      </div>
+    </section>
 
-        <aside class="announcements">
-            <h2>Latest Announcements</h2>
-            <article>
-                <h3>Registration Deadline Extended</h3>
-                <time datetime="2026-06-25">June 15, 2026</time>
-                <p>The registration deadline has been extended to <time datetime="2026-04-10">April 10, 2026</time>. Register now!</p>
-            </article>
-            <article>
-                <h3>Hackathon 2026 - New Event</h3>
-                <time datetime="2026-03-20">June 20, 2026</time>
-                <p>24-hour overnight coding marathon added to Technical Track. Industry mentors will guide participants.</p>
-            </article>
-        </aside>
-    </main>
+    <section class="section">
+      <h2>Highlights</h2>
+      <div class="grid">
+        <article class="card"><h3>Technical Innovation Challenge</h3><p>April 15, 2026 | 10:00 AM</p></article>
+        <article class="card"><h3>Cultural Night</h3><p>April 17, 2026 | 6:00 PM</p></article>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Department of Computer Science, Christ (Deemed to be University). All rights reserved.</p>
-        <p>Hosur Road, Bengaluru - 560029, Karnataka, India</p>
-    </footer>
+    <section class="section">
+      <h2>Announcements</h2>
+      <div class="grid">
+        <article class="card"><h3>Registration closes</h3><p>April 10, 2026.</p></article>
+        <article class="card"><h3>Track passes</h3><p>One pass gives access to one track.</p></article>
+      </div>
+    </section>
+  </main>
 
-    <script>
-        const countdownDate = new Date("2026-04-15T09:00:00").getTime();
-        const countdownElement = document.getElementById("event-countdown");
-        
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
-            
-            if (distance > 0) {
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                countdownElement.querySelector(".days-display").textContent = days;
-                countdownElement.querySelector(".hours-display").textContent = hours;
-                countdownElement.querySelector(".minutes-display").textContent = minutes;
-                countdownElement.querySelector(".seconds-display").textContent = seconds;
-            } else {
-                countdownElement.innerHTML = "Event has started!";
-            }
-        }
-        
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Department of Computer Science, Christ (Deemed to be University).</p>
+      <p>Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+    </div>
+  </footer>
 </body>
 </html>

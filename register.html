@@ -1,167 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christ University Events - Register</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christ University Events - Register</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Christ University Events &amp; Festivals</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="register.html" class="active">Register</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="faq-venue.html">FAQ & Venue</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="wrap top">
+      <div>
+        <p class="eyebrow">Christ (Deemed to be University)</p>
+        <h1>GATEWAYS 2026</h1>
+        <p class="sub">Department of Computer Science fest</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a><a href="schedule.html">Schedule</a><a class="active" href="register.html">Register</a><a href="leaderboard.html">Leaderboard</a><a href="faq-venue.html">FAQ &amp; Venue</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="registration-intro">
-            <h2>GATEWAYS 2026 Registration</h2>
-            <p>Department of Computer Science, Christ (Deemed to be University), Bangalore</p>
-            <p>Fill out the form below to register for events. Registration closes on <time datetime="2026-04-10">April 10, 2026</time></p>
-            <div class="countdown-inline">
-                <time id="register-deadline" datetime="2026-04-10T23:59">Registration deadline: <time id="countdown-register" datetime="2026-04-10T23:59"><span class="days">0</span>d <span class="hours">0</span>h <span class="minutes">0</span>m <span class="seconds">0</span>s remaining</time></time>
-            </div>
-        </section>
+  <main class="wrap">
+    <section class="section">
+      <span class="tag">Registration</span>
+      <h2>Register with ease</h2>
+      <p>Registration closes on April 10, 2026.</p>
+    </section>
 
-        <form action="#" method="post" class="registration-form">
-            <input type="hidden" name="form_id" value="gateways_2026_registration">
-            <input type="hidden" name="timestamp" value="2026-06-07">
-            <input type="hidden" name="source" value="website">
+    <section class="section">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Details</legend>
+          <label for="name">Full name</label><input id="name" name="name" required />
+          <label for="email">Email</label><input id="email" name="email" type="email" required />
+          <label for="dept">Department</label><input id="dept" name="dept" required />
+        </fieldset>
+        <fieldset>
+          <legend>Event</legend>
+          <label for="event">Primary event interest</label>
+          <select id="event" name="event" required>
+            <option value="">Select</option>
+            <option>Programming Contest</option><option>Hackathon 2026</option><option>PUBG Championship</option><option>Dance Competition</option>
+          </select>
+          <label for="note">Notes</label><textarea id="note" name="note" rows="4" placeholder="Anything we should know?"></textarea>
+        </fieldset>
+        <p class="actions"><button class="btn primary" type="submit">Submit</button><button class="btn" type="reset">Reset</button></p>
+      </form>
+    </section>
+  </main>
 
-            <fieldset>
-                <legend>Personal Details</legend>
-                <div class="form-group">
-                    <label for="fullname">Full Name:</label>
-                    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name as per records">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required placeholder="Enter your university email">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="Enter your contact number">
-                </div>
-                <div class="form-group">
-                    <label for="college">Department:</label>
-                    <input list="departments" id="department" name="department" required placeholder="Select your department">
-                    <datalist id="departments">
-                        <option value="Department of Computer Science">
-                        <option value="Department of Computer Applications">
-                        <option value="School of Sciences - BSc Computer Science">
-                        <option value="School of Engineering - CSE">
-                        <option value="School of Business Studies">
-                        <option value="School of Humanities">
-                        <option value="School of Social Sciences">
-                        <option value="School of Law">
-                    </datalist>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Event Selection</legend>
-                <div class="form-group">
-                    <label for="primary-event">Primary Event Interest:</label>
-                    <select id="primary-event" name="primary_event" required>
-                        <option value="">-- Select an Event --</option>
-                        <optgroup label="Technical Track">
-                            <option value="programming">Programming Contest</option>
-                            <option value="hackathon">Hackathon 2026</option>
-                            <option value="project_expo">Project Expo</option>
-                            <option value="code_debugging">Code Debugging Challenge</option>
-                        </optgroup>
-                        <optgroup label="Gaming Track">
-                            <option value="pubg">PUBG Championship</option>
-                            <option value="fifa">FIFA Tournament</option>
-                            <option value="valorant">Valorant Cup</option>
-                        </optgroup>
-                        <optgroup label="Cultural Track">
-                            <option value="dance">Dance Competition</option>
-                            <option value="music">Music Night</option>
-                            <option value="drama">Drama Performance</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <div class="form-group checkbox-group">
-                    <p>Select additional events (multiple allowed):</p>
-                    <input type="checkbox" id="tech-check" name="events" value="technical_track">
-                    <label for="tech-check">Technical Track Pass</label>
-                    
-                    <input type="checkbox" id="gaming-check" name="events" value="gaming_track">
-                    <label for="gaming-check">Gaming Track Pass</label>
-                    
-                    <input type="checkbox" id="cultural-check" name="events" value="cultural_track">
-                    <label for="cultural-check">Cultural Track Pass</label>
-                </div>
-                <div class="form-group">
-                    <label for="team-size">Team Size Preference:</label>
-                    <select id="team-size" name="team_size">
-                        <option value="1">Individual (1)</option>
-                        <option value="2">Duo (2)</option>
-                        <option value="3">Squad (3)</option>
-                        <option value="4">Team (4)</option>
-                    </select>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Additional Information</legend>
-                <div class="form-group">
-                    <label for="comments">Comments or Special Requirements:</label>
-                    <textarea id="comments" name="comments" rows="4" placeholder="Enter any special requirements..."></textarea>
-                </div>
-            </fieldset>
-
-            <div class="form-actions">
-                <button type="submit">Submit Registration</button>
-                <button type="reset">Reset Form</button>
-            </div>
-        </form>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Department of Computer Science, Christ (Deemed to be University). All rights reserved.</p>
-        <p>Hosur Road, Bengaluru - 560029, Karnataka, India | Contact: 080-40129100</p>
-    </footer>
-
-    <script>
-        function startCountdown(elementId, targetDate) {
-            const element = document.querySelector(elementId);
-            const countdownDate = new Date(targetDate).getTime();
-            
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
-                
-                if (distance > 0) {
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    
-                    if (element.querySelector(".days")) {
-                        element.querySelector(".days").textContent = days;
-                        element.querySelector(".hours").textContent = hours;
-                        element.querySelector(".minutes").textContent = minutes;
-                        element.querySelector(".seconds").textContent = seconds;
-                    }
-                } else {
-                    element.innerHTML = "Registration closed!";
-                }
-            }
-            
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        }
-        
-        startCountdown("#countdown-register", "2026-04-10T23:59:59");
-    </script>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Department of Computer Science, Christ (Deemed to be University).</p>
+      <p>Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+    </div>
+  </footer>
 </body>
 </html>
