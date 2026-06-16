@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GATEWAYS 2026 — Christ University CS Fest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap top">
+      <div>
+        <p class="eyebrow">Christ (Deemed to be University)</p>
+        <h1>GATEWAYS 2026</h1>
+        <p class="sub">Department of Computer Science fest</p>
+      </div>
+      <nav class="nav" id="nav">
+        <button class="active" data-page="home">Home</button>
+        <button data-page="schedule">Schedule</button>
+        <button data-page="register">Register</button>
+        <button data-page="leaderboard">Leaderboard</button>
+        <button data-page="faq">FAQ &amp; Venue</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ── HOME ── -->
+    <div class="page active" id="page-home">
+      <section class="hero section">
+        <span class="tag">April 15 to 17, 2026</span>
+        <h2>A simple, warm, and professional event site</h2>
+        <p class="muted">Three days of technical, gaming, and cultural activities at Christ University, Bengaluru.</p>
+        <p class="actions">
+          <button class="btn primary" onclick="goTo('register')">Register now</button>
+          <button class="btn" onclick="goTo('schedule')">View schedule</button>
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>At a glance</h2>
+        <div class="grid" style="margin-top:12px">
+          <article class="card"><h3>Technical</h3><p>Coding, hackathons, and project showcases.</p></article>
+          <article class="card"><h3>Gaming</h3><p>Focused tournaments with clear rounds and fair play.</p></article>
+          <article class="card"><h3>Cultural</h3><p>Music, dance, and stage performances.</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Highlights</h2>
+        <div class="grid" style="margin-top:12px">
+          <article class="card"><h3>Technical Innovation Challenge</h3><p>April 15, 2026 | 10:00 AM</p></article>
+          <article class="card"><h3>Cultural Night</h3><p>April 17, 2026 | 6:00 PM</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Announcements</h2>
+        <div class="grid" style="margin-top:12px">
+          <article class="card"><h3>Registration closes</h3><p>April 10, 2026.</p></article>
+          <article class="card"><h3>Track passes</h3><p>One pass gives access to one track.</p></article>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── SCHEDULE ── -->
+    <div class="page" id="page-schedule">
+      <section class="section">
+        <span class="tag">Event plan</span>
+        <h2>Schedule overview</h2>
+        <p class="muted">Small, clear, and easy to follow.</p>
+      </section>
+
+      <section class="section">
+        <h2>Technical</h2>
+        <div class="grid" style="margin-top:12px">
+          <article class="card"><h3>Programming Contest</h3><p>April 15 | 10:00 AM to 4:00 PM</p></article>
+          <article class="card"><h3>Hackathon 2026</h3><p>April 15 to 16 | 2:00 PM to 2:00 PM</p></article>
+          <article class="card"><h3>Project Expo</h3><p>April 16 | 11:00 AM to 3:00 PM</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Gaming</h2>
+        <div class="grid" style="margin-top:12px">
+          <article class="card"><h3>PUBG Championship</h3><p>April 15 | 3:00 PM onwards</p></article>
+          <article class="card"><h3>FIFA Tournament</h3><p>April 16 | 10:00 AM to 12:00 PM</p></article>
+          <article class="card"><h3>Valorant Cup</h3><p>April 17 | 9:00 AM to 1:00 PM</p></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Cultural</h2>
+        <div class="grid" style="margin-top:12px">
+          <article class="card"><h3>Dance Competition</h3><p>April 15 | 5:00 PM to 7:00 PM</p></article>
+          <article class="card"><h3>Music Night</h3><p>April 16 | 6:00 PM onwards</p></article>
+          <article class="card"><h3>Drama Performance</h3><p>April 17 | 5:00 PM to 7:00 PM</p></article>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── REGISTER ── -->
+    <div class="page" id="page-register">
+      <section class="section">
+        <span class="tag">Registration</span>
+        <h2>Register with ease</h2>
+        <p class="muted">Registration closes on <strong>April 10, 2026</strong>.</p>
+      </section>
+
+      <section class="section">
+        <form id="reg-form" onsubmit="handleRegister(event)">
+          <fieldset>
+            <legend>Details</legend>
+            <label for="name">Full name</label>
+            <input id="name" name="name" required placeholder="e.g. Arjun Kumar" />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            <label for="dept">Department</label>
+            <input id="dept" name="dept" required placeholder="e.g. Computer Science" />
+          </fieldset>
+          <fieldset>
+            <legend>Event</legend>
+            <label for="event">Primary event interest</label>
+            <select id="event" name="event" required>
+              <option value="">Select an event</option>
+              <option>Programming Contest</option>
+              <option>Hackathon 2026</option>
+              <option>PUBG Championship</option>
+              <option>Dance Competition</option>
+            </select>
+            <label for="note">Notes</label>
+            <textarea id="note" name="note" rows="4" placeholder="Anything we should know?"></textarea>
+          </fieldset>
+          <p class="actions">
+            <button class="btn primary" type="submit">Submit</button>
+            <button class="btn" type="reset">Reset</button>
+          </p>
+        </form>
+      </section>
+    </div>
+
+    <!-- ── LEADERBOARD ── -->
+    <div class="page" id="page-leaderboard">
+      <section class="section">
+        <span class="tag">Results</span>
+        <h2>Past winners</h2>
+        <p class="muted">A clean view of the top five from 2025.</p>
+      </section>
+
+      <section class="section table-wrap">
+        <table>
+          <thead>
+            <tr><th>Rank</th><th>Participant</th><th>Department</th><th>Points</th><th>Wins</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="rank-1">🥇 1</td><td>Arjun Kumar</td><td>Computer Science</td><td>950</td><td>3</td></tr>
+            <tr><td class="rank-2">🥈 2</td><td>Priya Sharma</td><td>Computer Applications</td><td>875</td><td>2</td></tr>
+            <tr><td class="rank-3">🥉 3</td><td>Rahul Verma</td><td>BSc Computer Science</td><td>820</td><td>2</td></tr>
+            <tr><td>4</td><td>Ananya Das</td><td>MCA - III Year</td><td>780</td><td>1</td></tr>
+            <tr><td>5</td><td>Vikram Singh</td><td>MSc Computer Science</td><td>750</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <!-- ── FAQ & VENUE ── -->
+    <div class="page" id="page-faq">
+      <section class="section">
+        <span class="tag">Help</span>
+        <h2>Questions and venue</h2>
+        <p class="muted">Useful details in one quiet, easy-to-scan page.</p>
+      </section>
+
+      <div class="grid" style="margin: 16px 0; align-items: flex-start;">
+        <div style="flex: 1 1 300px;">
+          <details>
+            <summary>What are the registration fees?</summary>
+            <div class="detail-body"><p>Technical: ₹200 &nbsp;·&nbsp; Gaming: ₹150 &nbsp;·&nbsp; Cultural: ₹100 &nbsp;·&nbsp; All-access: ₹400.</p></div>
+          </details>
+          <details>
+            <summary>Can I register for multiple events?</summary>
+            <div class="detail-body"><p>Yes. Pick the track or event that fits you best during registration.</p></div>
+          </details>
+          <details>
+            <summary>What is the last date?</summary>
+            <div class="detail-body"><p><time datetime="2026-04-10">April 10, 2026</time>.</p></div>
+          </details>
+          <details>
+            <summary>How do I contact the organizers?</summary>
+            <div class="detail-body">
+              <p><a href="mailto:cs.fest@christuniversity.in">cs.fest@christuniversity.in</a></p>
+              <p><a href="tel:+918040129100">080-40129100</a></p>
+            </div>
+          </details>
+        </div>
+
+        <div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 14px;">
+          <div class="card">
+            <h3>Venue</h3>
+            <p style="margin-top:8px"><strong>Christ (Deemed to be University)</strong><br />Department of Computer Science<br />Hosur Road, Bengaluru - 560029</p>
+            <p class="actions">
+              <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Christ+University+Hosur+Road+Bengaluru" target="_blank" rel="noreferrer">Open map</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>Facilities</h3>
+            <p style="margin-top:6px">Labs, seminar halls, library access, cafeteria, and Wi-Fi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Department of Computer Science, Christ (Deemed to be University).</p>
+      <p>Hosur Road, Bengaluru - 560029, Karnataka, India</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const pages = ['home', 'schedule', 'register', 'leaderboard', 'faq'];
+
+    function goTo(id) {
+      // hide all pages
+      pages.forEach(p => {
+        document.getElementById('page-' + p).classList.remove('active');
+      });
+      // deactivate all nav buttons
+      document.querySelectorAll('#nav button').forEach(btn => btn.classList.remove('active'));
+
+      // show target
+      document.getElementById('page-' + id).classList.add('active');
+      document.querySelector(`#nav button[data-page="${id}"]`).classList.add('active');
+
+      // scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // update URL hash (no reload)
+      history.replaceState(null, '', '#' + id);
+    }
+
+    // wire nav buttons
+    document.querySelectorAll('#nav button[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => goTo(btn.dataset.page));
+    });
+
+    // handle registration form
+    function handleRegister(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      showToast(`Registered! Welcome, ${name} 🎉`);
+      document.getElementById('reg-form').reset();
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    // load from URL hash on page load
+    const hash = location.hash.replace('#', '');
+    if (pages.includes(hash)) goTo(hash);
+  </script>
+</body>
+</html>
